@@ -1,5 +1,8 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
+import jetbrains.buildServer.configs.kotlin.v2019_2.CustomChart
+import jetbrains.buildServer.configs.kotlin.v2019_2.CustomChart.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.v2019_2.buildTypeCustomChart
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -28,6 +31,18 @@ version = "2021.2"
 project {
 
     buildType(Build)
+
+    features {
+        buildTypeCustomChart {
+            id = "PROJECT_EXT_3"
+            title = "nastiachart"
+            seriesTitle = "Serie"
+            format = CustomChart.Format.TEXT
+            series = listOf(
+                Serie(title = "Build Step #1 - Command Line "buildstepname"", key = SeriesKey.buildStepDuration("RUNNER_1"))
+            )
+        }
+    }
 }
 
 object Build : BuildType({
