@@ -39,7 +39,7 @@ project {
             seriesTitle = "Serie"
             format = CustomChart.Format.TEXT
             series = listOf(
-                Serie(title = "Build Step #1 - Command Line "buildstepname"", key = SeriesKey.buildStepDuration("RUNNER_1"))
+                Serie(title = "Finishinig Build", key = SeriesKey("buildStageDuration:buildFinishing"))
             )
         }
     }
