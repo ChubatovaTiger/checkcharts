@@ -39,9 +39,7 @@ project {
             seriesTitle = "Serie"
             format = CustomChart.Format.TEXT
             series = listOf(
-                Serie(title = """Build Step #1 - Command Line "command line 2"""", key = SeriesKey.buildStepDuration("RUNNER_1")),
-                Serie(title = """Build Step #2 - Command Line "cmd"""", key = SeriesKey.buildStepDuration("RUNNER_2")),
-                Serie(title = """Build Step #3 - Command Line "мой шаг шаг"""", key = SeriesKey.buildStepDuration("RUNNER_3"))
+                Serie(title = """Meta Build Step #2 - Command Line "cmd": step 1""", key = SeriesKey.buildStepDuration("RUNNER_211"))
             )
         }
     }
