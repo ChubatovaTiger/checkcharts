@@ -45,5 +45,9 @@ object Conf : BuildType({
             name = "cmd"
             scriptContent = "echo a"
         }
+        script {
+            name = """мой шаг "шаг""""
+            scriptContent = """echo "привет""""
+        }
     }
 })
