@@ -50,7 +50,7 @@ object Conf : BuildType({
 
     steps {
         script {
-            name = """step for "mstest" command"""
+            name = """step for "mstest command""""
             scriptContent = """
                 echo a 
                 echo b
