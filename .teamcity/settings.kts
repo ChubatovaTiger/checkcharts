@@ -41,5 +41,9 @@ object Conf : BuildType({
                 echo b
             """.trimIndent()
         }
+        script {
+            name = "cmd"
+            scriptContent = "echo a"
+        }
     }
 })
